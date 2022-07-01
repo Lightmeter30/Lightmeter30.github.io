@@ -55,8 +55,8 @@
     
     <entry>
       <title>Vue框架学习</title>
-      <link href="/2022/05/08/post/"/>
-      <url>/2022/05/08/post/</url>
+      <link href="/2022/05/08/Vue%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/"/>
+      <url>/2022/05/08/Vue%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/</url>
       
         <content type="html"><![CDATA[<h2 id="Vue基础语法"><a href="#Vue基础语法" class="headerlink" title="Vue基础语法"></a>Vue基础语法</h2><h3 id="数据绑定"><a href="#数据绑定" class="headerlink" title="数据绑定"></a>数据绑定</h3><p>  Vue中的数据绑定有以下两种方式:</p><ol><li>单向绑定(v-bind): 数据只能从data流向页面,当data中被绑定变量的内容改变时,这种改变会实时展示在页面上。</li><li>双向绑定(v-model): 数据在data和页面之间双向流通。</li></ol><div class="note warning simple"><p>双向绑定一般都应用在表单元素上(input,select等)</p></div><div class="note info simple"><p>v-model:value 可以简写成v-model,因为v-model默认收集的就是value值</p></div><h3 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h3><h4 id="事件处理"><a href="#事件处理" class="headerlink" title="事件处理"></a>事件处理</h4><p>Vue主要使用<mark class="hl-label red">v-on</mark> 监听事件,调用相应函数对用户的交互作出回应。<br>以下为事件处理的基本要点:</p><ol><li>使用<code>v-on:xxx</code>或<code>@xxx</code>来绑定事件,其中<mark class="hl-label blue">xxx</mark> 是事件名</li><li>事件的函数需要配置在methods对象中,最终在vm上</li><li>methods对象中的函数都在Vue的管理之下,因此函数中的<mark class="hl-label orange">this</mark> 指向的是vm或组件的实例对象</li><li><code>@click=&quot;demo&quot;</code>和<code>@click=&quot;demo($event)&quot;</code>效果一致,但是后者可以传参</li></ol><h5 id="事件修饰符"><a href="#事件修饰符" class="headerlink" title="事件修饰符"></a>事件修饰符</h5><p>Vue中的事件修饰符:</p><ol><li>.prevent: 阻止默认事件;</li><li>.stop: 阻止事件冒泡;</li><li>.once: 事件只触发一次;</li><li>.capture: 使用事件的捕获模式;</li><li>.self: 只有event.target是当前操作的元素时才能触发事件;</li><li>.passive: 事件默认立即执行,无需等待事件回调执行完毕;</li></ol><p>前三个事件修饰符是常用的,可以重点记一下。</p><h5 id="Vue中常用的按键别名"><a href="#Vue中常用的按键别名" class="headerlink" title="Vue中常用的按键别名"></a>Vue中常用的按键别名</h5><ol><li>回车: enter</li><li>删除: delete(捕获”删除”和”退格”)</li><li>退出: esc</li><li>空格: space</li><li>换行: tab(必须配合keydown使用)</li><li>上: up</li><li>下: down</li><li>左: left</li><li>右: right</li></ol><h5 id="Vue中的系统修饰键-ctrl-alt-shift-meta"><a href="#Vue中的系统修饰键-ctrl-alt-shift-meta" class="headerlink" title="Vue中的系统修饰键:ctrl,alt,shift,meta"></a>Vue中的系统修饰键:ctrl,alt,shift,meta</h5><ol><li>配合keyup使用: 按下修饰键的同时,再按下其他键,随后释放其他键,才会触发绑定事件</li><li>配合keydown使用: 正常触发绑定事件</li></ol><div class="note info simple"><p>Vue中未提供别名的按键,可以使用按键原始的key值去绑定,格式为kebab-case(短横线命名)</p></div>]]></content>
       
@@ -73,46 +73,6 @@
             <tag> 前端开发 </tag>
             
             <tag> vue </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>模板测试</title>
-      <link href="/2022/05/06/%E6%A8%A1%E6%9D%BF%E6%B5%8B%E8%AF%95/"/>
-      <url>/2022/05/06/%E6%A8%A1%E6%9D%BF%E6%B5%8B%E8%AF%95/</url>
-      
-        <content type="html"><![CDATA[<h2 id="模板测试"><a href="#模板测试" class="headerlink" title="模板测试"></a>模板测试</h2><p>首先啊即可完成放不开九八七六五的海南</p><p>扣1送地狱火<br>111大哥真送吗？</p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>这是我的第一篇博客</title>
-      <link href="/2022/05/06/testBlog/"/>
-      <url>/2022/05/06/testBlog/</url>
-      
-        <content type="html"><![CDATA[<h2 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">test</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Hello World!&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="博客更新代码"><a href="#博客更新代码" class="headerlink" title="博客更新代码"></a>博客更新代码</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean  //清除缓存</span><br><span class="line">hexo g      //生成网站静态文件到默认设置的 public 文件夹</span><br><span class="line">hexo d      //自动部署到设定的仓库</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> Computer Science </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Java </tag>
-            
-            <tag> Android </tag>
             
         </tags>
       
