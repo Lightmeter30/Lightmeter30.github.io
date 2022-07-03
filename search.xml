@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>服务器部署相关</title>
+      <link href="/2022/07/03/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%83%A8%E7%BD%B2%E7%9B%B8%E5%85%B3/"/>
+      <url>/2022/07/03/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%83%A8%E7%BD%B2%E7%9B%B8%E5%85%B3/</url>
+      
+        <content type="html"><![CDATA[<h2 id="服务期预设置"><a href="#服务期预设置" class="headerlink" title="服务期预设置"></a>服务期预设置</h2><h3 id="请选择你的服务器"><a href="#请选择你的服务器" class="headerlink" title="请选择你的服务器"></a>请选择你的服务器</h3><p>首先你得有一台年轻人自己的服务器，目前来说腾讯云，阿里云等国内的云平台都有学生优惠，对于学生党来说，最便宜的就够用了。我使用的服务器系统是Ubuntu Server 20.04 LTS 64bit。</p><h3 id="SSH远程连接"><a href="#SSH远程连接" class="headerlink" title="SSH远程连接"></a>SSH远程连接</h3><p>首先我们要配置SSH远程连接我们的服务器，毕竟谁也不想每次操作服务器都得登录云平台，那样太麻烦了。</p><ol><li>首先我们要在控制台中点击登录，第一步要初始化超级用户ROOT的密码，进入superuser权限：<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo passwd #初始化密码</span><br><span class="line">su  #切换到ROOT超级用户</span><br></pre></td></tr></table></figure></li><li>然后我们要修改相关的配置文件，允许SSH远程连接服务器：<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/ssh/sshd_config    #编辑ssh配置文件</span><br></pre></td></tr></table></figure></li><li>打开文件后，对如下行按照注释进行修改：<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">RSAAuthentication yes                       # 开启rsa验证，需要添加</span><br><span class="line">PubkeyAuthentication yes                    # 开启公钥登录，一般被注释掉了，去掉前面的#就好</span><br><span class="line">AuthorizedKeysFile .ssh/authorized_keys     # 公钥保存位置，原来就有</span><br><span class="line">PasswordAuthentication yes                  # 开启使用密码登录</span><br></pre></td></tr></table></figure></li><li>保存退出后使用如下指令重启SSH服务<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service sshd restart        # 重启ssh服务</span><br></pre></td></tr></table></figure></li><li>再在root模式下使用如下指令添加一个用户：<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adduser takune  #takune替换为你的用户名</span><br></pre></td></tr></table></figure>输入密码之后即可成功创建一个新用户。</li><li>由于部分服务器操作需要<code>sudo</code>权限，因此我们要给新添加的用户设置相关的权限：<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/sudoers    #在该文件下配置新用户的sudo权限</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">sudoers<span class="string">&#x27; content</span></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="string">User privilege specification</span></span></span><br><span class="line">takune ALL=(ALL:ALL) ALL    #添加sudo权限，使用wq!强制保存配置</span><br></pre></td></tr></table></figure></li><li>获取本地SSH公钥之后，按照如下步骤进行配置：<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ssh takune@123.45.56.890          #takune为你的用户名，@后面为服务器的IP地址</span><br><span class="line">mkdir .ssh                  #在该用户的根目录创建一个.ssh文件夹</span><br><span class="line">cd .ssh                     #进入.ssh文件夹</span><br><span class="line">touch authorized_keys       #创建名字为authorized_keys的文件</span><br><span class="line">vim authorized_keys         #编辑该文件内容，将SSH公钥复制到文件中后保存退出即可远程SSH连接</span><br><span class="line">sudo service sshd restart   #使用sudo权限重启SSH服务 </span><br></pre></td></tr></table></figure>到这一步我们终于实现了通过SSH远程连接服务器，就可以更加方便地操作服务器了。<h2 id="服务器安装Mysql"><a href="#服务器安装Mysql" class="headerlink" title="服务器安装Mysql"></a>服务器安装Mysql</h2></li></ol><h2 id="服务器安装Django环境"><a href="#服务器安装Django环境" class="headerlink" title="服务器安装Django环境"></a>服务器安装Django环境</h2><h2 id="配置uWSGI"><a href="#配置uWSGI" class="headerlink" title="配置uWSGI"></a>配置uWSGI</h2><h2 id="配置Nginx"><a href="#配置Nginx" class="headerlink" title="配置Nginx"></a>配置Nginx</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> Computer Science </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SQL </tag>
+            
+            <tag> 服务器 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Java Socket通信详解</title>
       <link href="/2022/06/26/Java-Socket%E9%80%9A%E4%BF%A1%E8%AF%A6%E8%A7%A3/"/>
       <url>/2022/06/26/Java-Socket%E9%80%9A%E4%BF%A1%E8%AF%A6%E8%A7%A3/</url>
