@@ -4,11 +4,63 @@
   
     
     <entry>
+      <title>hexo-butterfiy标签外挂代码模板</title>
+      <link href="/2022/09/26/hexo-butterfiy%E6%A0%87%E7%AD%BE%E5%A4%96%E6%8C%82%E4%BB%A3%E7%A0%81%E6%A8%A1%E6%9D%BF/"/>
+      <url>/2022/09/26/hexo-butterfiy%E6%A0%87%E7%AD%BE%E5%A4%96%E6%8C%82%E4%BB%A3%E7%A0%81%E6%A8%A1%E6%9D%BF/</url>
+      
+        <content type="html"><![CDATA[<h2 id="标签外挂-Tag-Plugins"><a href="#标签外挂-Tag-Plugins" class="headerlink" title="标签外挂 (Tag Plugins)"></a>标签外挂 (Tag Plugins)</h2><div class="note danger modern"><p>本文章转载自<a href="https://butterfly.js.org/">butterfly</a></p></div><div class="note info modern"><p>标签外挂是Hexo独有的功能，并非原生Markdown格式。</p><p>以下所介绍的写法，只适用于Butterfly主题，用在其它主题上不会有效果🤗</p></div><div class="note warning modern"><p>标签外挂可以为你的博客带来一些额外的功能和UI方面的美化，但是其使用也有一定的限制，使用时请留意。</p></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> Computer Science </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 前端开发 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>SysY语言编译器设计文档</title>
+      <link href="/2022/09/26/SysY%E8%AF%AD%E8%A8%80%E7%BC%96%E8%AF%91%E5%99%A8%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3/"/>
+      <url>/2022/09/26/SysY%E8%AF%AD%E8%A8%80%E7%BC%96%E8%AF%91%E5%99%A8%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3/</url>
+      
+        <content type="html"><![CDATA[<h1 id="2022编译器设计文档"><a href="#2022编译器设计文档" class="headerlink" title="2022编译器设计文档"></a>2022编译器设计文档</h1><div class="note info simple"><p>项目源码在此库中，如果觉得对你有所启发的话，请给个star吧！🥰<a class="btn-beautify larger" href="https://github.com/Lightmeter30/Compiler"   title="源码库"><i class="fab fa-github"></i><span>源码库</span></a></p></div><h2 id="1-参考编译器介绍：总结所阅读的编译器的总体结构、接口设计、文件组织等内容"><a href="#1-参考编译器介绍：总结所阅读的编译器的总体结构、接口设计、文件组织等内容" class="headerlink" title="1.参考编译器介绍：总结所阅读的编译器的总体结构、接口设计、文件组织等内容"></a>1.参考编译器介绍：总结所阅读的编译器的总体结构、接口设计、文件组织等内容</h2><h2 id="2-编译器总体设计：介绍自己的将要实现的编译器的总体结构、接口设计、文件组织等内容"><a href="#2-编译器总体设计：介绍自己的将要实现的编译器的总体结构、接口设计、文件组织等内容" class="headerlink" title="2.编译器总体设计：介绍自己的将要实现的编译器的总体结构、接口设计、文件组织等内容"></a>2.编译器总体设计：介绍自己的将要实现的编译器的总体结构、接口设计、文件组织等内容</h2><h3 id="2-1编译器的总体结构"><a href="#2-1编译器的总体结构" class="headerlink" title="2.1编译器的总体结构"></a>2.1编译器的总体结构</h3><h3 id="2-2编译器的总体设计"><a href="#2-2编译器的总体设计" class="headerlink" title="2.2编译器的总体设计"></a>2.2编译器的总体设计</h3><h3 id="2-3编译器的文件组织"><a href="#2-3编译器的文件组织" class="headerlink" title="2.3编译器的文件组织"></a>2.3编译器的文件组织</h3><h2 id="3-词法分析设计：编码前的设计、编码完成之后的修改"><a href="#3-词法分析设计：编码前的设计、编码完成之后的修改" class="headerlink" title="3.词法分析设计：编码前的设计、编码完成之后的修改"></a>3.词法分析设计：编码前的设计、编码完成之后的修改</h2><h3 id="3-1编码前的设计"><a href="#3-1编码前的设计" class="headerlink" title="3.1编码前的设计"></a>3.1编码前的设计</h3><h4 id="3-1-1代码结构总体设计"><a href="#3-1-1代码结构总体设计" class="headerlink" title="3.1.1代码结构总体设计"></a>3.1.1代码结构总体设计</h4><ul><li>构造了一个词法分析器类：<code>Lexer</code>，其功能是完成词法分析，因此这个类封装了完成词法分析所需要的所有函数；同时<code>lexer</code>类还实现了<code>error</code>接口,用来处理词法分析过中可能实现的错误；</li><li>构造了一个单词信息类：<code>WordInfo</code>，其功能是储存通过词法分析获得的单词的内容，类别码等信息；对于类别码是<code>IntConst</code>的单词，还会存储它的数值。</li></ul><h4 id="3-1-2词法分析的具体实现方案"><a href="#3-1-2词法分析的具体实现方案" class="headerlink" title="3.1.2词法分析的具体实现方案"></a>3.1.2词法分析的具体实现方案</h4><ul><li>总体实现方法: 词法分析函数每次读入一个字符，然后根据这个字符的值进入不同的分支，并且在该分支之下一定会完成一个单词类别码的分析或注释的处理。</li><li>实现难点:<ol><li>字符串的处理: SysY语言中的字符串一定是被<code>&quot;</code>所包裹的,因此只要识别到字符<code>&quot;</code>就进入字符串处理分支, 一直读取字符直到读到下一个<code>&quot;</code>。这个过程可能出现如下错误: 在读到下一个<code>&quot;</code>之前结束; 读取字符过程中出现非法字符(非法字符的定义详见错误处理); <code>%</code>或<code>\</code>单独出现(文法规定必须是<code>%d</code>和<code>\n</code>); </li><li>双字符符号的识别: 对于<code>!=</code>、<code>&gt;=</code>、<code>&lt;=</code>、<code>==</code>、<code>&amp;&amp;</code>、<code>||</code>这些双字符符号, 在读到对应的前缀进入对应的条件分支时, 需要预读一个字符,假如说可以组成文法定义的双字符, 则将其添加为双字符符号, 否则进行符号回退, 并且只处理前缀。</li><li>注释的处理: 由于字符串通过一个独立的分支处理, 因此字符串中的<code>//</code>、<code>/*</code>、<code>*/</code>不会被识别为注释; 同时一旦确定读取到<code>//</code>或<code>/*</code>,在读到换行符或<code>*/</code>之前不会对注释字符进行任何语法上的分析。因此也同时避免将注释内容误认为语法成分。</li><li>标识符的处理: 只要是以字母和下划线开头, 就进入标识符处理分支, 直到字符既不是字母、数字或者下划线。</li><li>换行: 注意在不同操作系统下的换行符可能有不同的情况,因此需要进行相关处理; 同时后续的错误处理作业中会有要求输出错误片段对应的行号的要求,因此要注意保存行号。</li></ol></li></ul><h3 id="3-2编码后的修改"><a href="#3-2编码后的修改" class="headerlink" title="3.2编码后的修改"></a>3.2编码后的修改</h3><p>考虑到词法分析中部分函数可能在其它功能中也需要使用，使代码的结构更加清晰合理，因此新建一个名字为<code>Tools</code>的工具类，而<code>Lexer</code>类只保留最主要的词法分析相关的方法，将字符串判断和处理函数这些与词法分析功能关联不大的方法转移到<code>Tools</code>类中，将其作为一个专门存储通用的静态方法的工具类使用。</p><h2 id="4-语法分析设计：编码前的设计、编码完成之后的修改"><a href="#4-语法分析设计：编码前的设计、编码完成之后的修改" class="headerlink" title="4.语法分析设计：编码前的设计、编码完成之后的修改"></a>4.语法分析设计：编码前的设计、编码完成之后的修改</h2><h3 id="4-1编码前的设计"><a href="#4-1编码前的设计" class="headerlink" title="4.1编码前的设计"></a>4.1编码前的设计</h3><h3 id="4-2编码后的修改"><a href="#4-2编码后的修改" class="headerlink" title="4.2编码后的修改"></a>4.2编码后的修改</h3><h2 id="5-错误处理设计：编码前的设计、编码完成之后的修改"><a href="#5-错误处理设计：编码前的设计、编码完成之后的修改" class="headerlink" title="5.错误处理设计：编码前的设计、编码完成之后的修改"></a>5.错误处理设计：编码前的设计、编码完成之后的修改</h2><h3 id="5-1编码前的设计"><a href="#5-1编码前的设计" class="headerlink" title="5.1编码前的设计"></a>5.1编码前的设计</h3><h3 id="5-2编码后的修改"><a href="#5-2编码后的修改" class="headerlink" title="5.2编码后的修改"></a>5.2编码后的修改</h3><h2 id="6-代码生成设计：编码前的设计、编码完成之后的修改"><a href="#6-代码生成设计：编码前的设计、编码完成之后的修改" class="headerlink" title="6.代码生成设计：编码前的设计、编码完成之后的修改"></a>6.代码生成设计：编码前的设计、编码完成之后的修改</h2><h3 id="6-1编码前的设计"><a href="#6-1编码前的设计" class="headerlink" title="6.1编码前的设计"></a>6.1编码前的设计</h3><h3 id="6-2编码后的修改"><a href="#6-2编码后的修改" class="headerlink" title="6.2编码后的修改"></a>6.2编码后的修改</h3><h2 id="7-代码优化设计：编码前的设计、编码完成之后的修改，未选择MIPS代码生成的同学无需完成此项内容"><a href="#7-代码优化设计：编码前的设计、编码完成之后的修改，未选择MIPS代码生成的同学无需完成此项内容" class="headerlink" title="7.代码优化设计：编码前的设计、编码完成之后的修改，未选择MIPS代码生成的同学无需完成此项内容"></a>7.代码优化设计：编码前的设计、编码完成之后的修改，未选择MIPS代码生成的同学无需完成此项内容</h2><h3 id="7-1编码前的设计"><a href="#7-1编码前的设计" class="headerlink" title="7.1编码前的设计"></a>7.1编码前的设计</h3><h3 id="7-2编码后的修改"><a href="#7-2编码后的修改" class="headerlink" title="7.2编码后的修改"></a>7.2编码后的修改</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> Computer Science </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Compile </tag>
+            
+            <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Python学习笔记</title>
       <link href="/2022/09/26/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
       <url>/2022/09/26/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
       
-        <content type="html"><![CDATA[<p>本文章只是记录一下学习python时所做的一些笔记,看个乐就行 :)</p>]]></content>
+        <content type="html"><![CDATA[<p>本文章只是记录一下学习python时所做的一些笔记,看个乐就行🥰</p>]]></content>
       
       
       <categories>
