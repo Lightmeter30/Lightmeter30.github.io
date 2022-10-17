@@ -12,9 +12,9 @@ https://lightmeter30.github.io/link/index.html
 https://lightmeter30.github.io/categories/index.html
 https://lightmeter30.github.io/
 https://lightmeter30.github.io/tags/Python/
-https://lightmeter30.github.io/tags/Java/
 https://lightmeter30.github.io/tags/shell/
 https://lightmeter30.github.io/tags/Compile/
+https://lightmeter30.github.io/tags/Java/
 https://lightmeter30.github.io/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/
 https://lightmeter30.github.io/tags/vue/
 https://lightmeter30.github.io/tags/SQL/
