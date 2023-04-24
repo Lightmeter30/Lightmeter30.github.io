@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://lightmeter30.github.io/2023/04/24/typescript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    
+    <lastmod>2023-04-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://lightmeter30.github.io/2023/03/28/Mybatis%E6%93%8D%E4%BD%9C/</loc>
     
     <lastmod>2023-04-14</lastmod>
@@ -148,7 +157,7 @@
 
   <url>
     <loc>https://lightmeter30.github.io/</loc>
-    <lastmod>2023-04-17</lastmod>
+    <lastmod>2023-04-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -156,77 +165,91 @@
   
   <url>
     <loc>https://lightmeter30.github.io/tags/python/</loc>
-    <lastmod>2023-04-17</lastmod>
+    <lastmod>2023-04-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lightmeter30.github.io/tags/Django/</loc>
-    <lastmod>2023-04-17</lastmod>
+    <lastmod>2023-04-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lightmeter30.github.io/tags/SQL/</loc>
-    <lastmod>2023-04-17</lastmod>
+    <lastmod>2023-04-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lightmeter30.github.io/tags/Java/</loc>
-    <lastmod>2023-04-17</lastmod>
+    <lastmod>2023-04-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lightmeter30.github.io/tags/Python/</loc>
-    <lastmod>2023-04-17</lastmod>
+    <lastmod>2023-04-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lightmeter30.github.io/tags/shell/</loc>
-    <lastmod>2023-04-17</lastmod>
+    <lastmod>2023-04-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lightmeter30.github.io/tags/Compile/</loc>
-    <lastmod>2023-04-17</lastmod>
+    <lastmod>2023-04-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lightmeter30.github.io/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</loc>
-    <lastmod>2023-04-17</lastmod>
+    <lastmod>2023-04-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lightmeter30.github.io/tags/vue/</loc>
-    <lastmod>2023-04-17</lastmod>
+    <lastmod>2023-04-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://lightmeter30.github.io/tags/typescript/</loc>
+    <lastmod>2023-04-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://lightmeter30.github.io/tags/javascript/</loc>
+    <lastmod>2023-04-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lightmeter30.github.io/tags/C/</loc>
-    <lastmod>2023-04-17</lastmod>
+    <lastmod>2023-04-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lightmeter30.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
-    <lastmod>2023-04-17</lastmod>
+    <lastmod>2023-04-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -235,21 +258,21 @@
   
   <url>
     <loc>https://lightmeter30.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2023-04-17</lastmod>
+    <lastmod>2023-04-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lightmeter30.github.io/categories/Computer-Science/</loc>
-    <lastmod>2023-04-17</lastmod>
+    <lastmod>2023-04-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lightmeter30.github.io/categories/algorithm/</loc>
-    <lastmod>2023-04-17</lastmod>
+    <lastmod>2023-04-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

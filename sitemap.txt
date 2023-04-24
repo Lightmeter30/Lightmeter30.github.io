@@ -1,3 +1,4 @@
+https://lightmeter30.github.io/2023/04/24/typescript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/
 https://lightmeter30.github.io/2023/03/28/Mybatis%E6%93%8D%E4%BD%9C/
 https://lightmeter30.github.io/2022/05/08/Vue%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/
 https://lightmeter30.github.io/2023/03/08/JDBC%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E5%BA%93/
@@ -24,6 +25,8 @@ https://lightmeter30.github.io/tags/shell/
 https://lightmeter30.github.io/tags/Compile/
 https://lightmeter30.github.io/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/
 https://lightmeter30.github.io/tags/vue/
+https://lightmeter30.github.io/tags/typescript/
+https://lightmeter30.github.io/tags/javascript/
 https://lightmeter30.github.io/tags/C/
 https://lightmeter30.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/
 https://lightmeter30.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/
